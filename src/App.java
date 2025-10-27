@@ -20,10 +20,6 @@ public class App {
     static final Class<App> CLASS = App.class;
 
     public static void main(String[] args) {
-        // var pdfFeatures = PDFFeatureExtractor.extractFeatures(
-        // ADVERTISING_DATA.concat("/32p_1.1_Folder Zeitungsbeilage
-        // RZ+++3186911").concat(".pdf"));
-
         String resourcePath = "main/resources/pdf/32p_1.1_FolderZeitungsbeilageRZ+++3186911.pdf";
         var inputStream = CLASS.getClassLoader().getResourceAsStream(resourcePath);
         var pdfFeatures = PDFFeatureExtractor.extractFeatures(inputStream);
