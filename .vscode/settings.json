@@ -1,0 +1,5 @@
+{
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "hb432.prettier-eslint-typescript",
+    "editor.fontSize": 15
+}

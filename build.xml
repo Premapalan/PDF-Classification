@@ -1,5 +1,6 @@
 <project name="PDF_Classification" default="jar" basedir=".">
   <property name="src.dir" value="src"/>
+  <property name="resources.dir" value="src"/>
   <property name="lib.dir" value="lib"/>
   <property name="build.dir" value="build/classes"/>
   <property name="dist.dir" value="dist"/>
@@ -14,10 +15,20 @@
   <target name="clean">
     <delete dir="${build.dir}"/>
     <delete dir="${dist.dir}"/>
+      <echo message="Classpath jars: ${lib.dir}"/>
+  </target>
+
+  <target name="print-classpath">
+    <pathconvert property="classpath.str" pathsep=":" refid="project.classpath"/>
+    <echo message="Classpath jars: ${classpath.str}"/>
   </target>
 
   <target name="compile" depends="clean">
     <mkdir dir="${build.dir}"/>
+    <!-- Copy non-Java resources into the classes output so ClassLoader.getResource can find them -->
+    <copy todir="${build.dir}" failonerror="false">
+      <fileset dir="${resources.dir}"/>
+    </copy>
     <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" classpathref="project.classpath" />
   </target>
 
