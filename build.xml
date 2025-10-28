@@ -31,13 +31,4 @@
     </copy>
     <javac srcdir="${src.dir}" destdir="${build.dir}" includeantruntime="false" classpathref="project.classpath" />
   </target>
-
-  <!--<target name="jar" depends="compile">
-    <mkdir dir="${dist.dir}"/>
-    <jar destfile="${dist.dir}/${jar.name}" basedir="${build.dir}">
-      <manifest>
-        <attribute name="Main-Class" value="src.DatabaseAImpose"/>
-      </manifest>
-    </jar>
-  </target>-->
 </project>

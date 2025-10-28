@@ -2,21 +2,7 @@
 import main.java.pdf.feature.extract.PDFFeatureExtractor;
 import static main.java.utility.LogUtility.LOG;
 
-import java.net.URL;
-
 public class App {
-    // static final String TRAININGDATA_PATH =
-    // "/Users/prasathpremapalan/Development/TrainingData";
-    // static final String BOOKS_DATA = TRAININGDATA_PATH.concat("/Books");
-    // static final String ADVERTISING_DATA =
-    // TRAININGDATA_PATH.concat("/Advertising");
-    // static final String BROSCHURES_DATA =
-    // TRAININGDATA_PATH.concat("/Broschures");
-    // static final String BUSINESSCARDS_DATA =
-    // TRAININGDATA_PATH.concat("/BussinesCards");
-    // static final String NEWSPAPER_DATA = TRAININGDATA_PATH.concat("/Newspaper");
-    // static final String MAGAZINES_DATA = TRAININGDATA_PATH.concat("/Magazines");
-
     static final Class<App> CLASS = App.class;
 
     public static void main(String[] args) {
